@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <style>
+        #box {
+            
+	    text-align:left;
+
+        }
+
+        div {
+            background-color: skyblue;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+
+        <h2 id="title">Welcome Student</h2>
+
+        <p id="paragraph">This is a Document Object Manipulation</p>
+
+        <img id="image" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNpsnO6g21v0QNfBE-dUEMZjSMHN48QDeJBH8YO6Wo-PeZS8Bat_R_yc8YOhxnxxk&s=10&ec=121924538>
+
+        <br><br>
+
+        <a id="link" href="https://www.bucketlistly.blog/posts/best-free-travel-images">
+            Google Image
+        </a>
+
+        <br><br>
+
+        <button onclick="changeContent()">Change Content</button>
+        <button onclick="changeImage()">Change Image</button>
+        <button onclick="changeLink()">Change Link</button>
+        <button onclick="changeFontSize()">Change FontSize</button>
+        <button onclick="changeBackgroundColor()">Change BackgroundColor</button>
+
+    </div>
+
+    <script>
+        function changeContent() {
+            let title = document.getElementById("title");
+            let paragraph = document.getElementById("paragraph");
+
+            title.innerHTML = "Hello Student";
+            paragraph.innerHTML = "Content has been changed!";
+        }
+
+        function changeImage() {
+            let image = document.getElementById("image");
+
+            image.src = "https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg";
+        }
+
+        function changeLink() {
+            let link = document.getElementById("link");
+
+            link.href = "https://www.google.com";
+            link.innerHTML = "Google";
+        }
+
+        function changeFontSize() {
+            let text = document.getElementById("paragraph");
+
+            text.style.fontSize = "30px";
+        }
+
+        function changeBackgroundColor() {
+            let page = document.getElementById("box");
+
+            page.style.backgroundColor = "lightpink";
+        }
+    </script>
+
+</body>
+</html>
+
